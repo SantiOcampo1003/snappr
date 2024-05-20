@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     }
 
     const aiResponse = await openai.createImage({
-        prompt: promptString ,
+        prompt: promptString,
         size: "512x512",
         response_format: "url",
     })

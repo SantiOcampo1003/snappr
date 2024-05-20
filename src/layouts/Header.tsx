@@ -1,24 +1,12 @@
 'use client';
-
-import {
-  Navbar,
-  Typography,
-  IconButton,
-  Button,
-  Input,
-} from "@material-tailwind/react";
-import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
-import { UserCircleIcon } from "@heroicons/react/24/solid";
+import { Navbar, Typography } from "@material-tailwind/react";
+import Link from "next/link";
 
 export default function Header() {
-  const navListItems = [
-    {
-      label: "Home",
-      icon: UserCircleIcon,
-    }, {
-      label: "About",
-      icon: UserCircleIcon,
-    }]
+  const handleSnapprClick = () => {
+    window.location.reload();
+  };
+
   return (
     <Navbar
       variant="gradient"
@@ -29,19 +17,14 @@ export default function Header() {
           as="a"
           href="#"
           variant="h6"
-          className="mr-4 ml-2 cursor-pointer py-1.5" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
-          Material Tailwind
+          className="mr-4 ml-2 cursor-pointer py-1.5"
+          onClick={handleSnapprClick} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
+          Snappr
         </Typography>
-        <div className="ml-auto flex gap-1 md:mr-4">
-          <IconButton variant="text" color="white" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-            <Cog6ToothIcon className="h-4 w-4" />
-          </IconButton>
-          <IconButton variant="text" color="white" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-            <BellIcon className="h-4 w-4" />
-          </IconButton>
-          <Typography color="white" className="hidden md:block" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-            About 'use client'
-          </Typography>
+        <div className="mr-600">
+          <Link href="./about">
+           About
+          </Link>
         </div>
       </div>
     </Navbar>

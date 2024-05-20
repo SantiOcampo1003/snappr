@@ -25,7 +25,7 @@ export default function HomeTabs() {
       desc: <ImageGenerate />,
     }]
   return (
-    <Tabs value={activeTab}className="p-10">
+    <Tabs value={activeTab}className="p-10 mt-100">
       <TabsHeader
         indicatorProps={{
           className: "",
