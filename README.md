@@ -23,11 +23,11 @@ Join us as we harness the potential of artificial intelligence to redefine human
 To get started with our application, follow these simple steps:
 
 ### 1. Clone the Repository
-git clone https://github.com/your-username/your-repository.git
+git clone [https://github.com/SantiOcampo1003/snappr.git]
 
 
 ### 2. Navigate to the Project Directory
-cd your-repository
+cd snappr
 
 
 ### 3. Install Dependencies
